@@ -12,14 +12,12 @@ export class UpdateproductComponent {
 
   updatedProduct:any = {};
   updatedProductId:any;
-  update_Product:any = {};
-  showUpdateProduct = false;
   public updateProduct():any{
     return this.privateService.updateProduct(this.updatedProduct,this.updatedProductId).subscribe(
       (res:any)=>{
-        this.update_Product = res;
-        this.showUpdateProduct=true;
-        console.log(res);
+        alert(res.message)
+        console.log(res.message);
+
       },
       (err:any)=>{
         console.log(err);

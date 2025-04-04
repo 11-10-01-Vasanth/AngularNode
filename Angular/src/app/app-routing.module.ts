@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AppComponent } from './app.component';
 import { CreateproductComponent } from './createproduct/createproduct.component';
 import { DeleteproductComponent } from './deleteproduct/deleteproduct.component';
 import { GetsingleproductComponent } from './getsingleproduct/getsingleproduct.component';
@@ -8,24 +9,24 @@ import { UpdateproductComponent } from './updateproduct/updateproduct.component'
 const routes: Routes = [
   {
     path:'',
-    redirectTo:'',
+    redirectTo:'create',
     pathMatch:'full'
   },
   {
-    path:'create',
-    component:CreateproductComponent
-  },
-  {
     path:'delete',
-    component:DeleteproductComponent
+    component: DeleteproductComponent
   },
   {
-    path:'getproduct',
-    component:GetsingleproductComponent
+    path:'getsingleproduct',
+    component: GetsingleproductComponent
+  },
+  {
+    path:'create',
+    component: CreateproductComponent
   },
   {
     path:'update',
-    component:UpdateproductComponent
+    component: UpdateproductComponent
   }
 ];
 

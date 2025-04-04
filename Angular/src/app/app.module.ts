@@ -3,7 +3,6 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductComponentComponent } from './product-component/product-component.component';
 import { provideHttpClient } from '@angular/common/http';
 import { ProductServiceService } from './product-service.service';
 import { FormsModule } from '@angular/forms';
@@ -14,7 +13,6 @@ import { CreateproductComponent } from './createproduct/createproduct.component'
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponentComponent,
     GetsingleproductComponent,
     DeleteproductComponent,
     UpdateproductComponent,

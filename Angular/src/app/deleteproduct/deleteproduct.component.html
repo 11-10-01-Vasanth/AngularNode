@@ -2,6 +2,6 @@
   ------------ Delete a Product ------
 </h1>
 <form action="" (ngSubmit)="deleteProduct()">
-  <input type="number" [(ngModel)]="deleteproductid">
+  <input type="number" [(ngModel)]="deleteproductid" [ngModelOptions]="{standalone: true}">
   <button type="submit">Delete Product</button>
 </form>

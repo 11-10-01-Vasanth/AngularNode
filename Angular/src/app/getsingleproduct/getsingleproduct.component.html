@@ -1,7 +1,8 @@
+
 <h1>
   ------------ Get a Product ------
 </h1>
 <form action="" (ngSubmit)="getProduct()">
-  <input type="number" [(ngModel)]="productid">
+  <input type="number" [(ngModel)]="productid" [ngModelOptions]="{standalone: true}">
   <button type="submit">Get Product</button>
 </form>

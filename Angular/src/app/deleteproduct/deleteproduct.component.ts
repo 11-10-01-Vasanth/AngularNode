@@ -12,7 +12,7 @@ export class DeleteproductComponent {
 
   deleteproductid:any
   public deleteProduct():any{
-    return this.privateService.getProduct(this.deleteproductid).subscribe(
+    return this.privateService.deleteProduct(this.deleteproductid).subscribe(
       (res:any)=>{
         console.log(res);
         alert("Product deleted...");

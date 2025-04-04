@@ -2,21 +2,9 @@
   ------------ Update a Product ------
 </h1>
 <form (ngSubmit)="updateProduct()">
-  Id : <input type="number" [(ngModel)]="updatedProduct.id" name="id"> <br><br>
+  Id : <input type="number" [(ngModel)]="updatedProductId" name="id"> <br><br>
   Name : <input type="text" [(ngModel)]="updatedProduct.name" name="name"> <br><br>
   Description : <input type="text" [(ngModel)]="updatedProduct.description" name="description"> <br><br>
   Price : <input type="number" [(ngModel)]="updatedProduct.price" name="price"> <br><br>
   <button type="submit">Update Product</button>
 </form>
-<table border="1" *ngIf="showUpdateProduct">
-  <thead>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Price</th>
-  </thead>
-  <tbody *ngFor="let item of update_Product">
-    <td>{{item.name}}</td>
-    <td>{{item.description}}</td>
-    <td>{{item.price}}</td>
-  </tbody>
-</table>
