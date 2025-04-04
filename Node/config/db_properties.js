@@ -1,6 +1,6 @@
 module.exports = {
   host: "localhost",
-  user: "root",
+  user: "postgres",
   password: "vaSA@2001",
   database: "angulardb",
 };
