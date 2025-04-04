@@ -1,0 +1,10 @@
+<h1>
+  ------------ Create A Product ------
+</h1>
+<form (ngSubmit)="createProduct()">
+  Id : <input type="number" [(ngModel)]="newProduct.id" name="id"> <br><br>
+  Name : <input type="text" [(ngModel)]="newProduct.name" name="name"> <br><br>
+  Description : <input type="text" [(ngModel)]="newProduct.description" name="description"> <br><br>
+  Price : <input type="number" [(ngModel)]="newProduct.price" name="price"> <br><br>
+  <button type="submit">Create Product</button>
+</form>
