@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
 import { CreateproductComponent } from './createproduct/createproduct.component';
 import { DeleteproductComponent } from './deleteproduct/deleteproduct.component';
 import { GetsingleproductComponent } from './getsingleproduct/getsingleproduct.component';

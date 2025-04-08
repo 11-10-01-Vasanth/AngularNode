@@ -1,0 +1,90 @@
+<h2 class="text-center mb-4">Reactive Form</h2>
+
+<div class="container">
+  <form [formGroup]="personForm" (ngSubmit)="handleSubmit()"
+    class="p-4 shadow rounded bg-light">
+
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label class="form-label">First Name:</label>
+        <input type="text" class="form-control" formControlName="firstName">
+
+        <div class="alert alert-danger mt-2 rounded shadow-sm"
+          *ngIf="personForm.controls['firstName'].touched && personForm.controls['firstName'].errors">
+          <div *ngIf="personForm.controls['firstName'].hasError('required')">
+            <strong>Oops!</strong> First name cannot be empty.
+          </div>
+          <div *ngIf="personForm.controls['firstName'].hasError('minlength')">
+            <strong>Oops!</strong> Minimum 3 characters.
+          </div>
+          <div *ngIf="personForm.controls['firstName'].hasError('maxlength')">
+            <strong>Oops!</strong> Maximum 10 characters.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Last Name:</label>
+        <input type="text" class="form-control" formControlName="lastName">
+
+        <div class="alert alert-danger mt-2 rounded shadow-sm"
+          *ngIf="personForm.controls['lastName'].touched && personForm.controls['lastName'].errors">
+          <div *ngIf="personForm.controls['lastName'].hasError('required')">
+            <strong>Oops!</strong> Last name cannot be empty.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Email:</label>
+      <input type="email" class="form-control" formControlName="email"
+        required="true">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Gender:</label><br>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" formControlName="gender"
+          value="M" id="male">
+        <label class="form-check-label" for="male">Male</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" formControlName="gender"
+          value="F" id="female">
+        <label class="form-check-label" for="female">Female</label>
+      </div>
+    </div>
+
+    <div formGroupName="address" class="border p-3 rounded bg-white mb-3">
+      <h5>Address</h5>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Street:</label>
+          <input type="text" class="form-control" formControlName="street">
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label">City:</label>
+          <input type="text" class="form-control" formControlName="city">
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label">State:</label>
+          <select class="form-control" formControlName="state">
+            <option value disabled="true">Select State</option>
+            <option *ngFor="let s of states" value=s>{{s}}</option>
+          </select>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label class="form-label">Zip:</label>
+          <input type="number" class="form-control" formControlName="zip">
+        </div>
+      </div>
+    </div>
+
+    <div align="center">
+      <button type="submit"
+        class="btn btn-success px-5 py-2 rounded-pill">Submit</button>
+    </div>
+
+  </form>
+</div>

@@ -1,0 +1,19 @@
+<h1>OneWay - Binding</h1>
+
+<!-- Interpolation -->
+<h2>Welcome {{ name }}</h2>
+
+<!-- Input Property Binding -->
+<input [value]="name">
+
+<!-- Output Event Binding -->
+<button (click)="greetUser()">Greet</button>
+
+<br> <br>
+
+<h1>TwoWay - Binding</h1>
+
+<!-- Two-Way Data Binding -->
+ <input type="text" [(ngModel)]="myName">
+
+ <p>{{ myName }}</p>

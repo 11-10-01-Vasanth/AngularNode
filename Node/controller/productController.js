@@ -2,7 +2,6 @@ var dbconnection = require("../config/db_connection"); // Import the connection 
 var express = require("express");
 var router = express.Router();
 
-// ✅ Use pool.query() for executing queries with 'pg'
 router.get("/", (req, res) => {
   dbconnection.query("SELECT * FROM product", (error, results) => {
     if (error) {
